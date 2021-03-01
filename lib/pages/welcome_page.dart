@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sisi/pages/login_page.dart';
-import 'package:sisi/pages/signup_page.dart';
+import 'package:sisi/widgets/custom_dialog_box.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -49,7 +49,9 @@ class _WelcomePageState extends State<WelcomePage> {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(15.0),
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
+                              showDialog(context: context, builder: (BuildContext context){
+                                return CustomDialogBox(text: "Let\'s get started", svgAsset: 'assets/images/press_play.svg', isDone: false);
+                              });
                             },
                             child: Container(
                               margin: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.1,right: MediaQuery.of(context).size.width * 0.08),

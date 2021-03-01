@@ -98,22 +98,27 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.65,right: MediaQuery.of(context).size.width * 0.025),
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  width: MediaQuery.of(context).size.width * 0.25,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(18.0),
-                    boxShadow: kElevationToShadow[3]
-                  ),
-                  child: Center(
-                    child: Text(
-                      'LOGIN',
-                      style: TextStyle(
-                          fontFamily: 'Quicksand',
-                          fontWeight: FontWeight.bold,
-                          fontSize: MediaQuery.of(context).size.width * 0.05
+                InkWell(
+                  onTap: (){
+                    
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.65,right: MediaQuery.of(context).size.width * 0.025),
+                    height: MediaQuery.of(context).size.height * 0.06,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: BorderRadius.circular(18.0),
+                      boxShadow: kElevationToShadow[3]
+                    ),
+                    child: Center(
+                      child: Text(
+                        'LOGIN',
+                        style: TextStyle(
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.bold,
+                            fontSize: MediaQuery.of(context).size.width * 0.05
+                        ),
                       ),
                     ),
                   ),
